@@ -1,0 +1,12 @@
+<h1>Posts</h1>
+
+<div *ngIf="posts$">
+  <ul [@listStagger]="posts$">
+    <li *ngFor="let post of posts$">
+      <ul>
+        <li><strong>{{ post.title }}</strong></li>
+        <p>{{ post.body }}</p>
+      </ul>
+    </li>
+  </ul>
+</div>
